@@ -8,7 +8,7 @@ import NavbarToggle from 'react-bootstrap/esm/NavbarToggle';
 const NavBar = () => {
     return (
     <>   
-    <Navbar expand="lg" bg='drop-shadow(0 0 2em #646cffaa)'>
+    <Navbar bg="light" data-bs-theme="light">
         <Container>
          <Navbar.Brand href="#home">Mercado de Cuadros</Navbar.Brand>
          <NavbarToggle aria-controls='responsive-navbar-nav'/>
