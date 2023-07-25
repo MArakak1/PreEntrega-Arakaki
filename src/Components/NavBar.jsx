@@ -3,13 +3,14 @@ import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import CartWidget from './CartWidget';
 import NavbarToggle from 'react-bootstrap/esm/NavbarToggle';
-
+import brand from '../public/cultura.svg'
 
 const NavBar = () => {
     return (
     <>   
     <Navbar bg="light" data-bs-theme="light">
-        <Container>
+        <Container >
+        <img src= {brand} alt="logo-tienda" width='40px' heigh='40px'/>
          <Navbar.Brand href="#home">Mercado de Cuadros</Navbar.Brand>
          <NavbarToggle aria-controls='responsive-navbar-nav'/>
           <Navbar.Collapse>
