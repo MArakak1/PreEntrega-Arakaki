@@ -1,27 +1,34 @@
 import React from 'react'
-import 'bootstrap/dist/css/bootstrap.min.css';
-import { Container } from 'react-bootstrap'
 import NavBar from './Components/NavBar';
 import ItemListContainer from './Components/ItemListContainer';
-import ItemCount from './Components/ItemCount';
-import ItemList from './Components/ItemList';
-import Item from './Components/Item';
+import ItemDetailContainer from './Components/ItemDetailContainer';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import Home from './Components/Home';
+import About from './Components/About';
+import Contact from './Components/Contact';
+import Cart from './Components/Cart';
+
 
 
 const App = () => {
-    
+
   return (
-    <Container >
-      <NavBar className='NavBar-Inicio'/>
+    <BrowserRouter>
+      <NavBar className='NavBar-Inicio' />
+      
+      <Routes>
 
-      <ItemListContainer
-        greeting="Siempre hay Espacio para un Cuadro!" />
-      <ItemCount/>
+       <Route exact path="/home" element={<Home/>}/>
+       <Route exact path="/about" element={<About/>}/>
+       <Route exact path="/contact" element={<Contact/>}/>
+       <Route exact path="/cart" element={<Cart/>}/>
+       <Route exact path="/category/:category" element={<ItemListContainer/>}/>
+       <Route exact path="/item/:id" element={<ItemDetailContainer/>}/>
 
-      <ItemList/>
-      <Item/>
-    </Container>
+      </Routes>
+
+    </BrowserRouter>
   )
-}
+};
 
 export default App
