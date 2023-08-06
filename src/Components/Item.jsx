@@ -15,7 +15,7 @@ const Item = ({nombre, description, category, id,}) => {
           <Card.Text>
             {description}
             {category}
-          </Card.Text>
+            </Card.Text>
          
           <Button style={{backgroundColor: 'beige', borderColor: 'black'}}>
             <Link to={`/item/${id}`} style={{color:'black'}}>

@@ -12,10 +12,10 @@ const ItemDetail = ({ productos }) => {
       {productosFiltrados.map((p) => {
 
         return (
-          <div style={{ display:'center', width: '18rem' }} 
+          <div style={{ display:'flex', width: '18rem', justifyContent:'center', alignItems:'center' }} 
            key={p.id}>
             
-              <Card style={{ borderColor: 'black',  display: 'center', width: '18rem' }}>
+              <Card style={{ borderColor: 'black',  display: 'flex', width: '18rem',  justifyContent:'center', alignItems:'center' }}>
                 <Card.Header>{p.nombre}</Card.Header>
                 <Card.Text>{p.description}</Card.Text>
                 <Card.Text>{p.category}</Card.Text>

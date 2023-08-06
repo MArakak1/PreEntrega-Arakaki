@@ -35,7 +35,7 @@ const ItemDetailContainer = () => {
     })
 
   return (
-    <div style= {{display: 'center'}} >
+    <div style={{ borderColor: 'black',  display: 'center', width: '18rem',  justifyContent:'center', alignItems:'center' }} >
       <ItemDetail
         productos={productos}
       />
