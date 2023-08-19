@@ -21,16 +21,16 @@ const NavBar = () => {
         <Navbar.Collapse id="responsive-navbar-nav">
 
           <Nav>
-            <Nav.Link href={`/category/elementos`}>Colección Elementos</Nav.Link>
-            <Nav.Link href={`/category/manos`}>Colección Manos</Nav.Link>
-            <Nav.Link href={`/category/collage`}>Colección Collage</Nav.Link>
+            <Link to='/category/elementos'>Colección Elementos</Link>
+            <Link to='/category/manos'>Colección Manos</Link>
+            <Link to='/category/collage'>Colección Collage</Link>
           </Nav>
         </Navbar.Collapse>
 
       </Container>
-      <Nav.Link href="/Cart">
+      <Link to="/Cart">
         <CartWidget />
-      </Nav.Link>
+      </Link>
     </Navbar>
   );
 }

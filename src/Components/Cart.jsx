@@ -1,9 +1,14 @@
-import React from 'react'
+import {useContext} from 'react'
+import { CartContext } from '../Context/ShoppingCartContext'
 
 const Cart = () => {
+
+  const {cart, setCart, longitud} = useContext (CartContext)
+
   return (
     <div style={{display: 'flex', justifyContent:'center', alignItems:'center'}}>
-      <h3>Tu carrito está vacío. Ve a llenarlo!</h3>
+
+      <p>{cart}</p>
     </div>
   )
 }

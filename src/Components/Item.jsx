@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 import '../App.css';
 
 
-const Item = ({nombre, description, category, id,}) => {
+const Item = ({nombre, description, category, id}) => {
   return (
     <div style={{ display:'center', width: '18rem' }}>
       <Card>
@@ -16,6 +16,7 @@ const Item = ({nombre, description, category, id,}) => {
             {description}
             {category}
             </Card.Text>
+
          
           <Button style={{backgroundColor: 'beige', borderColor: 'black'}}>
             <Link to={`/item/${id}`} style={{color:'black'}}>

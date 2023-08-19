@@ -1,44 +1,39 @@
-import { useEffect, useState } from 'react'
+import {useState, useContext } from 'react'
+import { CartContext } from '../Context/ShoppingCartContext';
 
-const ItemCount = () => {
-
-  const [mensaje, setMensaje] = useState("Mensaje Inicial")
-  const [contador, setContador] = useState(0)
-
-  useEffect(() => {
-    console.log("efecto secundario")
-  }, [contador])
+const ItemCount = ({stock, item}) => {
+  const {cart, setCart} = useContext (CartContext)
+  const [count, setCount] = useState(1)
 
   const sumar = () => {
-    //condicional
-    if(contador < 10) {
-    setContador(contador + 1)
+    //boton para sumar
+    count < stock ? setCount(count +1)
+     :console.log("No hay más stock disponible")
     }
-  };
-
-  const restar = () => {
-    //condicional
-    if (contador > 0) {
-      setContador(contador - 1)
+    
+    const restar = () => {
+      //boton para restar
+      count > 1 && setCount (count -1)
+    };
+    
+    const addToCart = () => {
+      //boton para agregar al carro
+      const productAdd = { ...item, count}
+      console.log(productAdd)
+      {cart.push(addToCart)}
     }
-  };
-
-  const reset =() => {
-    setContador (0)
-  }
 
 
-  return (
-    <div>
-      <p>{mensaje}</p>
-      <button onClick={() => setMensaje("Mensaje Modificado")}>Cambio</button>
-      <p>{contador}</p>
+    return (
+      <>
       <button onClick={sumar}>+</button>
-      <button onClick= {reset}>Limpiar</button>
+      <>{count}</>
       <button onClick={restar}>-</button>
+      <button onClick= {addToCart} >Agregar a Carrito</button>
 
-    </div>
+    </>
   )
-}
-
+};
+  
 export default ItemCount
+
