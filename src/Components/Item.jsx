@@ -2,30 +2,32 @@ import React from 'react'
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 import { Link } from 'react-router-dom';
-import '../App.css';
+import '../Item.css';
 
 
-const Item = ({nombre, description, category, id}) => {
+const Item = ({nombre, descripcion, categoria, id, precio}) => {
   return (
-    <div style={{ display:'center', width: '18rem' }}>
-      <Card>
+    <div className="div-Item" style={{ display:'center', width: '18rem' }}>
 
         <Card.Body>
           <Card.Title>{nombre}</Card.Title>
           <Card.Text>
-            {description}
-            {category}
+            <p>{descripcion}</p>
+            {categoria}
+            <p>
+              ${precio}
+            </p>
             </Card.Text>
 
-         
-          <Button style={{backgroundColor: 'beige', borderColor: 'black'}}>
+         <footer>
+          <Button className= "boton-Item" >
             <Link to={`/item/${id}`} style={{color:'black'}}>
             Detalles
             </Link>
           </Button>
+          </footer>
 
         </Card.Body>
-      </Card>
     </div>
   )
 }

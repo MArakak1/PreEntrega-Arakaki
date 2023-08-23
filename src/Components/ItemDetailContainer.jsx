@@ -7,8 +7,6 @@ import {useParams} from 'react-router-dom'
 const ItemDetailContainer = () => {
   const {id} = useParams()
   const[producto, setProducto] = useState([])
-  console.log(producto)
-
 
   useEffect (() => {
     const db = getFirestore()

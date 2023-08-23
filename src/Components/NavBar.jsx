@@ -27,7 +27,7 @@ const NavBar = () => {
               Colección Manos
               </Link>
             <Link to='/category/collage'>
-              Colección Collage+
+              Colección Collage
               </Link>
           </Nav>
         </Navbar.Collapse>

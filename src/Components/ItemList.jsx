@@ -1,4 +1,3 @@
-import React from 'react'
 import Item from './Item';
 
 const ItemList = ({ productos }) => {
@@ -8,11 +7,12 @@ const ItemList = ({ productos }) => {
         {productos.map((p)=> {
             return (
                 <Item
-                key={p.id}
+                key={p.nombre}
                 id={p.id}
+                category= {p.category}
                 nombre={p.nombre}
-                description={p.description}
-                stock={p.stock}
+                description={p.descripcion}
+                precio={p.precio}
                 />
             );
         })}

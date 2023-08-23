@@ -1,0 +1,12 @@
+.div-Item{
+  background-color:antiquewhite;
+  border-color: 'black';
+  padding: 10px;
+  border: 1px solid #ccc;
+  width: '18rem';
+}
+
+.boton-Item{
+  background-color:beige;
+  border:'black';
+}
