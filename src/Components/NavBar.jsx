@@ -20,13 +20,13 @@ const NavBar = () => {
         <Navbar.Collapse id="responsive-navbar-nav">
 
           <Nav>
-            <Link to='/category/elementos'>
+            <Link to='/category/Elementos'>
               Colección Elementos
               </Link>
-            <Link to='/category/manos'>
+            <Link to='/category/Manos'>
               Colección Manos
               </Link>
-            <Link to='/category/collage'>
+            <Link to='/category/Collage'>
               Colección Collage
               </Link>
           </Nav>
