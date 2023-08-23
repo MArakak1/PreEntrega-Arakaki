@@ -1,14 +1,30 @@
 import {useContext} from 'react'
 import { CartContext } from '../Context/ShoppingCartContext'
+import {Card} from 'react-bootstrap'
 
 const Cart = () => {
 
-  const {cart, setCart, longitud} = useContext (CartContext)
+  const {cart} = useContext (CartContext);
 
   return (
     <div style={{display: 'flex', justifyContent:'center', alignItems:'center'}}>
 
-      <p>{cart}</p>
+      <h1>Carrito</h1>
+
+
+
+      {
+        cart.map ((prod) => {
+          return(
+          <Card key={prod.id}>
+          <Card.Header>{prod.nombre}</Card.Header>
+          <Card.Text>{prod.description}</Card.Text>
+          <Card.Text>{prod.category}</Card.Text>
+          <Card.Text>{prod.count}</Card.Text>
+          </Card>
+          )
+        })
+      }
     </div>
   )
 }

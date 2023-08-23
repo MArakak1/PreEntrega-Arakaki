@@ -21,7 +21,7 @@ const ItemDetail = ({ productos }) => {
               <Card.Text>{p.description}</Card.Text>
               <Card.Text>{p.category}</Card.Text>
               <footer>
-                <ItemCount initial={0} stock={10} item={productosFiltrados} />
+                <ItemCount initial={0} stock={10} item={p} />
               </footer>
             </Card>
 

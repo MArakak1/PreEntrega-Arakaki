@@ -8,8 +8,7 @@ import { Link } from 'react-router-dom';
 
 
 const NavBar = () => {
-  
-  
+    
   return (
     <Navbar bg="light" data-bs-theme="light">
       <Container >
@@ -21,9 +20,15 @@ const NavBar = () => {
         <Navbar.Collapse id="responsive-navbar-nav">
 
           <Nav>
-            <Link to='/category/elementos'>Colección Elementos</Link>
-            <Link to='/category/manos'>Colección Manos</Link>
-            <Link to='/category/collage'>Colección Collage</Link>
+            <Link to='/category/elementos'>
+              Colección Elementos
+              </Link>
+            <Link to='/category/manos'>
+              Colección Manos
+              </Link>
+            <Link to='/category/collage'>
+              Colección Collage+
+              </Link>
           </Nav>
         </Navbar.Collapse>
 
