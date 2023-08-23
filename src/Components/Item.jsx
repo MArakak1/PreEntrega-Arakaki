@@ -12,11 +12,9 @@ const Item = ({nombre, descripcion, categoria, id, precio}) => {
         <Card.Body>
           <Card.Title>{nombre}</Card.Title>
           <Card.Text>
-            <p>{descripcion}</p>
+            {descripcion}
             {categoria}
-            <p>
-              ${precio}
-            </p>
+            ${precio}
             </Card.Text>
 
          <footer>

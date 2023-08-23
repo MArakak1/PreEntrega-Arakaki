@@ -10,7 +10,7 @@ const ItemDetail = ({ cuadros }) => {
  
  useEffect (() => {
   const db = getFirestore();
-  const cuadroRef = doc(db, "Cuadros", `${id}`);
+  const cuadroRef = doc(db, "Cuadros",id);
 
   getDoc(cuadroRef).then ((snapshot) => {
     if(snapshot.exists()){
@@ -21,13 +21,8 @@ const ItemDetail = ({ cuadros }) => {
   });
  }, []);
  
- const cuadrosFiltro = cuadros.filter((cuadros) => cuadros.id == id )
   return (
-    <div>
-      {cuadrosFiltro.map((p) => {
-
-        return (
-          <div key={p.id}>
+           <div key={p.id}>
               <Card.Header>{p.nombre}</Card.Header>
               <Card.Text>{p.descripcion}</Card.Text>
               <Card.Text>{p.categoria}</Card.Text>
@@ -35,11 +30,8 @@ const ItemDetail = ({ cuadros }) => {
               <footer>
                 <ItemCount initial={0} stock={10} item={p} />
               </footer>
-            
 
-          </div>
-        )
-      })}
+
     </div>
   )
 }
