@@ -1,14 +1,17 @@
 import React from 'react'
 import { useContext } from 'react'
 import { CartContext } from '../Context/ShoppingCartContext'
+import {Link} from 'react-router-dom'
 
 const CartWidget = () => {
   const {cantidadEnCart} = useContext(CartContext)
   
   return (
     <>
-      <i className="bi bi-cart4 fs-2"></i>
-      <p>{cantidadEnCart()}</p>
+      <Link to= "/cart" className='CartWidget'>
+      <i className="bi bi-cart4 fs-2"/>
+      {cantidadEnCart()}
+      </Link>
     </>
   )
 }

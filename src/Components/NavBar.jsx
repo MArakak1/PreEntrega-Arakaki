@@ -1,3 +1,4 @@
+import '../index.css';
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
@@ -7,32 +8,31 @@ import brand from '../public/cultura.svg'
 import { Link } from 'react-router-dom';
 
 
+
 const NavBar = () => {
-    
+
   return (
-    <Navbar bg="light" data-bs-theme="light">
-      <Container >
-        <Link to="/">
+    <Navbar className='NavBar' bg="dark" data-bs-theme="dark">
+      <>
+        <Nav.Link href="/">
           <img src={brand} alt="logo-tienda" width='40px' heigh='40px' />
           <Navbar.Brand>Mercado de Cuadros</Navbar.Brand>
-        </Link>
+        </Nav.Link>
         <NavbarToggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
-
-          <Nav>
-            <Link to='/category/Elementos'>
+          <Nav className="me-auto">
+            <Nav.Link className='Nav.Link' href='/category/Elementos'>
               Colección Elementos
-              </Link>
-            <Link to='/category/Manos'>
+            </Nav.Link>
+            <Nav.Link href='/category/Manos'>
               Colección Manos
-              </Link>
-            <Link to='/category/Collage'>
+            </Nav.Link>
+            <Nav.Link href='/category/Collage'>
               Colección Collage
-              </Link>
+            </Nav.Link>
           </Nav>
         </Navbar.Collapse>
-
-      </Container>
+      </>
       <Link to="/Cart">
         <CartWidget />
       </Link>

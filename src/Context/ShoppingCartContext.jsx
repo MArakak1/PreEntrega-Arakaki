@@ -6,6 +6,7 @@ export const CartContext = createContext(null);
 
 export const ShoppingCartProvider = ({ children }) => {
   const [cart, setCart] = useState([])
+  console.log(cart)
 
   const addToCart = (item, count) => {
     //boton para agregar al carro
@@ -25,12 +26,20 @@ export const ShoppingCartProvider = ({ children }) => {
 
   const cantidadEnCart = () => {
     return cart.reduce  ((acc, prod) => acc + prod.count, 0)
-  } 
+  }
+
+  const precioTotal = () => {
+    return cart.reduce ((acc,prod) => acc + prod.precio*prod.count, 0)
+  }
+
+  const clearCart = () => {
+    setCart([])
+  }
 
 
   return (
 
-    <CartContext.Provider value={{ cart, addToCart, cantidadEnCart }}>
+    <CartContext.Provider value={{ cart, addToCart, cantidadEnCart, clearCart, precioTotal }}>
 
       {children}
 

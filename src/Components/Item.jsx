@@ -1,17 +1,19 @@
 import React from 'react'
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
+import Image from 'react-bootstrap/Image';
 import { Link } from 'react-router-dom';
 import '../Item.css';
 
 
-const Item = ({nombre, descripcion, categoria, id, precio}) => {
+const Item = ({nombre, descripcion, categoria, id, precio, imagen}) => {
   return (
-    <div className="div-Item" style={{ display:'center', width: '18rem' }}>
+    <div className="div-Item">
 
         <Card.Body>
           <Card.Title>{nombre}</Card.Title>
           <Card.Text>
+            <Image src={imagen}/>
             {descripcion}
             {categoria}
             ${precio}
@@ -19,7 +21,7 @@ const Item = ({nombre, descripcion, categoria, id, precio}) => {
 
          <footer>
           <Button className= "boton-Item" >
-            <Link to={`/item/${id}`} style={{color:'black'}}>
+            <Link to={`/item/${id}`}>
             Detalles
             </Link>
           </Button>

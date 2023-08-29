@@ -1,3 +1,4 @@
+import '../Estilos/Home.css';
 import ItemList from './ItemList'
 import { useEffect, useState } from 'react';
 import { collection, getDocs, getFirestore, query, where } from 'firebase/firestore'
@@ -6,6 +7,7 @@ import { useParams } from 'react-router-dom';
 const ItemListContainer = () => {
   const [productos, setProductos] = useState([])
   const { category } = useParams()
+
   
   useEffect(() => {
     const db = getFirestore()
@@ -19,7 +21,6 @@ const ItemListContainer = () => {
   }, [category]);
 
 
- 
   return (
     <>
       {<ItemList productos={productos} />}

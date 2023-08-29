@@ -1,10 +1,13 @@
 import { Card } from 'react-bootstrap';
+import React from 'react';
 import ItemCount from './ItemCount';
 import {useParams} from 'react-router-dom';
 import {doc, getDoc, getFirestore} from 'firebase/firestore'
 import { useEffect, useState } from 'react';
+import Image from 'react-bootstrap/Image';
 
-const ItemDetail = ({ cuadros }) => {
+
+const ItemDetail = ({ cuadro }) => {
  const {id} = useParams();
  const [producto, setProducto] = useState([]);
  
@@ -22,13 +25,14 @@ const ItemDetail = ({ cuadros }) => {
  }, []);
  
   return (
-           <div key={p.id}>
-              <Card.Header>{p.nombre}</Card.Header>
-              <Card.Text>{p.descripcion}</Card.Text>
-              <Card.Text>{p.categoria}</Card.Text>
-              <Card.Text>{p.precio}</Card.Text>
+           <div key={cuadro.id}>
+              <Card.Header>{cuadro.nombre}</Card.Header>
+              <Image src= {cuadro.imagen}/>
+              <Card.Text>{cuadro.descripcion}</Card.Text>
+              <Card.Text>{cuadro.categoria}</Card.Text>
+              <Card.Text>{cuadro.precio}</Card.Text>
               <footer>
-                <ItemCount initial={0} stock={10} item={p} />
+                <ItemCount initial={0} stock={10} item={cuadro} />
               </footer>
 
 
@@ -36,4 +40,4 @@ const ItemDetail = ({ cuadros }) => {
   )
 }
 
-export default ItemDetail
+export default React.memo(ItemDetail);

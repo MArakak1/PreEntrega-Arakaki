@@ -1,9 +1,11 @@
+import '../Estilos/ItemList.css';
+import React from 'react'
 import Item from './Item';
 
 const ItemList = ({ productos }) => {
    
    return (
-        <div  style={{display: 'flex', justifyContent:'center', alignItems:'center', space:'10px'}}>
+        <div className='contenedor.item'>
         {productos.map((p)=> {
             return (
                 <Item
@@ -11,8 +13,10 @@ const ItemList = ({ productos }) => {
                 id={p.id}
                 category= {p.category}
                 nombre={p.nombre}
-                description={p.descripcion}
+                descripcion={p.descripcion}
                 precio={p.precio}
+                imagen={p.imagen}
+
                 />
             );
         })}
@@ -20,4 +24,4 @@ const ItemList = ({ productos }) => {
     );
 };
 
-export default ItemList
+export default React.memo(ItemList);

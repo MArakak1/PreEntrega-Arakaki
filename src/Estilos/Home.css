@@ -1,0 +1,22 @@
+.contenedor {
+    text-align: center;
+    padding: 20px;
+    background-color: beige;
+    height: 80vh; 
+    display: center;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .titulo {
+    font-family: 'Arial', sans-serif;
+    font-size: 36px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 150px;
+  }
+  .ItemListContainer {
+    margin-top: 200px; /* Espacio entre el título y el componente */
+    text-align: center;
+}

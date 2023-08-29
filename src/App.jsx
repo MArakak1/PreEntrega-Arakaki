@@ -10,6 +10,7 @@ import ShoppingCartContext from './Context/ShoppingCartContext';
 import { useContext, useState } from 'react';
 // Import the functions you need from the SDKs you need
 import { initializeApp } from "firebase/app";
+import SendOrder from './Components/SendOrder';
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
 
@@ -27,14 +28,12 @@ const firebaseConfig = {
 const app = initializeApp(firebaseConfig);
 
 const App = () => {
-  const [cart, addToCart] = useState([])
-
 
   return (
     
 
    <BrowserRouter>
-    <ShoppingCartContext value = { {cart, addToCart} }>
+    <ShoppingCartContext value = { {} }>
       <NavBar className='NavBar-Inicio' />
       
       <Routes>
@@ -45,6 +44,7 @@ const App = () => {
        <Route exact path="/cart" element={<Cart/>}/>
        <Route exact path="/category/:category" element={<ItemListContainer/>}/>
        <Route exact path="/item/:id" element={<ItemDetailContainer/>}/>
+       <Route exact path="/checkout" element={<SendOrder/>}/>
 
       </Routes>
 
