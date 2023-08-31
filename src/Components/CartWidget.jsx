@@ -7,12 +7,12 @@ const CartWidget = () => {
   const {cantidadEnCart} = useContext(CartContext)
   
   return (
-    <>
-      <Link to= "/cart" className='CartWidget'>
+    
+      <Link to= '/cart' className='CartWidget'>
       <i className="bi bi-cart4 fs-2"/>
-      {cantidadEnCart()}
+      <>{cantidadEnCart()}</>
       </Link>
-    </>
+
   )
 }
 

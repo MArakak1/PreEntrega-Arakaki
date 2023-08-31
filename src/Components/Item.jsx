@@ -3,7 +3,7 @@ import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 import Image from 'react-bootstrap/Image';
 import { Link } from 'react-router-dom';
-import '../Item.css';
+import '../Estilos/Item.css';
 
 
 const Item = ({nombre, descripcion, categoria, id, precio, imagen}) => {

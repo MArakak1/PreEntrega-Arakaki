@@ -1,0 +1,22 @@
+.div-Item{
+  background-color:rgb(11, 178, 108);
+  border-color: 'black';
+  padding: 10px;
+  border: 1px solid #ccc;
+  width: '18rem';
+  gap: "2em";
+  align-items: "flex-end";
+  flex-wrap: "wrap";
+}
+
+.boton-Item{
+  background-color:beige;
+  border:'black';
+}
+
+.contenedor-item {
+  width: "40%";
+  flex-wrap: "wrap";
+  align-items: "flex-end";
+  gap: "2em";
+}

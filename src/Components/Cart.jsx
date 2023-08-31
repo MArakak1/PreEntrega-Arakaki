@@ -9,7 +9,7 @@ const Cart = () => {
   
   
   return (
-    <div>      
+    <div >      
           {cart.map ((prod) => {
           return(
             <Card key={prod.id}>
