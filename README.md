@@ -8,5 +8,5 @@ Bienvenidos a este carrito de compras hecho en react llamado Mercado de Cuadros!
 #### Librería usadas:
 reactBootsrap  
 
-[Video de funcionamiento de la página haciendo]([https://www.example.com](https://drive.google.com/file/d/1FojY7FNMqQERasxBT4bslWKJvxcPnE9C/view?usp=drive_link))
+[Video de funcionamiento de la página haciendo](https://drive.google.com/file/d/1FojY7FNMqQERasxBT4bslWKJvxcPnE9C/view?usp=drive_link)
 
