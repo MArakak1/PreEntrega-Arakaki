@@ -2,7 +2,7 @@ import {useState} from 'react'
 import {collection, addDoc, getFirestore} from "firebase/firestore"
 import { useContext } from 'react';
 import { CartContext } from '../Context/ShoppingCartContext';
-
+import '../Estilos/sendOrder.css'
 
 const SendOrder = () => {
     const {cart, precioTotal} = useContext(CartContext);
@@ -30,7 +30,7 @@ const SendOrder = () => {
  
 
     return (
-    <div>
+    <div className="SendOrder">
         <h1>Finalizá tu compra!</h1>
         <form onSubmit={handleSubmit}> 
         <input type='text' placeholder="Nombre y Apellido"
