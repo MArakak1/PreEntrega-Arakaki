@@ -6,7 +6,6 @@ export const CartContext = createContext(null);
 
 export const ShoppingCartProvider = ({ children }) => {
   const [cart, setCart] = useState([])
-  console.log(cart)
 
   const addToCart = (item, count) => {
     //boton para agregar al carro

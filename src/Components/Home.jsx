@@ -1,10 +1,17 @@
 import React from 'react';
 import ItemListContainer from './ItemListContainer';
-import '../Estilos/Home.css'; // Agrega un archivo Home.css en la misma ubicación que este componente
+import '../Estilos/Home.css';
 
 const Home = () => {
   return (
-    <div className='contenedor'>
+    <div style={{
+      textAlign: "center",
+      padding: "50px",
+      height: "80vh",
+      display: "center",
+      flexWrap: "wrap",
+      
+      }}>
       <h1 className='titulo'>Siempre hay Espacio para un Cuadro!!</h1>
       <ItemListContainer />
     </div>

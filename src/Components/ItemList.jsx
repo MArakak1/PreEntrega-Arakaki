@@ -1,11 +1,17 @@
-import '../Estilos/ItemList.css';
-import React from 'react'
+import React from 'react';
 import Item from './Item';
 
 const ItemList = ({ productos }) => {
    
    return (
-        <div className='contenedor.item'>
+        <div style=
+        {{
+            display: "flex", 
+            flexWrap: "wrap", 
+            justifyContent: "space-between", 
+            alignItems: "flex-start", 
+            width: "100%",
+        }}>
         {productos.map((p)=> {
             return (
                 <Item

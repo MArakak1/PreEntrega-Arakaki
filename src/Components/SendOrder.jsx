@@ -21,7 +21,7 @@ const SendOrder = () => {
     const order ={
         buyer: {nombre: name, email: email},
         item: cart,
-       precio: precioTotal,
+       precio: precioTotal(),
     };
     
     const ordersCollection = collection (db,"orden")

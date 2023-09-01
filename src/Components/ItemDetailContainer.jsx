@@ -6,6 +6,7 @@ import { useParams } from 'react-router-dom';
 const ItemDetailContainer = () => {
   const { id } = useParams()
   const [producto, setProducto] = useState([])
+  
 
   useEffect(() => {
     const db = getFirestore();
@@ -24,6 +25,6 @@ const ItemDetailContainer = () => {
      {<ItemDetail cuadro ={producto}/>}
     </div>
   )
-}
+};
 
 export default ItemDetailContainer

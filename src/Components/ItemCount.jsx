@@ -1,35 +1,29 @@
-import { useState, useContext } from 'react'
+import React, { useState, useContext } from 'react';
 import { CartContext } from '../Context/ShoppingCartContext';
+import '../Estilos/itemCount.css';
 
 const ItemCount = ({ stock, item = { cuadro } }) => {
-
-  const { cart, addToCart } = useContext(CartContext)
-
-  const [count, setCount] = useState(1)
+  const { cart, addToCart } = useContext(CartContext);
+  const [count, setCount] = useState(1);
 
   const sumar = () => {
-    //boton para sumar
-    count < stock ? setCount(count + 1)
-      : console.log("No hay más stock disponible")
-  }
-
-  const restar = () => {
-    //boton para restar
-    count > 1 && setCount(count - 1)
+    count < stock ? setCount(count + 1) : console.log("No hay más stock disponible");
   };
 
-
+  const restar = () => {
+    count > 1 && setCount(count - 1);
+  };
 
   return (
-    <>
-      <button onClick={sumar}>+</button>
-      <>{count}</>
+    <div className="item-count">
       <button onClick={restar}>-</button>
-      <button onClick={() => {addToCart (item, count)}} >Agregar a Carrito</button>
-
-    </>
-  )
+      <span className="count">{count}</span>
+      <button onClick={sumar}>+</button>
+      <button className="add-to-cart" onClick={() => addToCart(item, count)}>
+        Agregar a Carrito
+      </button>
+    </div>
+  );
 };
 
-export default ItemCount
-
+export default ItemCount;

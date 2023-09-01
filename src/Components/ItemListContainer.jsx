@@ -1,4 +1,3 @@
-import '../Estilos/Home.css';
 import ItemList from './ItemList'
 import { useEffect, useState } from 'react';
 import { collection, getDocs, getFirestore, query, where } from 'firebase/firestore'
@@ -25,7 +24,7 @@ const ItemListContainer = () => {
     <>
       {<ItemList productos={productos} />}
     </>
-  )
-}
+  );
+};
 
 export default ItemListContainer

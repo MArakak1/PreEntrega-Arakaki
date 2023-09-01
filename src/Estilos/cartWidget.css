@@ -1,0 +1,28 @@
+.CartWidget {
+    position: relative;
+    display: flex;
+    align-items: center;
+    color: #9c27b0; 
+    text-decoration: none;
+  }
+  
+  .CartWidget .bi {
+    margin-right: 5px;
+  }
+  
+  .CartWidget::after {
+    content: attr(data-count);
+    position: absolute;
+    top: -8px;
+    right: -8px;
+    background-color: #9c27b0; 
+    color: white;
+    font-size: 12px;
+    padding: 2px 6px;
+    border-radius: 50%;
+  }
+  
+  .CartWidget[data-count="0"]::after {
+    background-color: #ccc;
+    color: #777;
+  }
